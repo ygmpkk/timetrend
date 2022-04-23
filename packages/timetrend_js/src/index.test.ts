@@ -30,7 +30,7 @@ describe('TimeTrend', () => {
 
     assert.deepEqual(timeseries.length, 706);
 
-    assert.deepEqual(new Date(timeseries[0]).toLocaleString(), new Date('2022-04-14T17:30:00').toLocaleString());
+    assert.deepEqual(new Date(timeseries[0]).toLocaleString(), new Date('2022-04-14 17:30:00').toLocaleString());
 
     assert.deepEqual(
       new Date(timeseries[timeseries.length - 1]).toLocaleString(),

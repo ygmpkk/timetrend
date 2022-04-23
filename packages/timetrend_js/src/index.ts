@@ -40,9 +40,9 @@ export class TimeTrend {
         debug('Day:', 'T-1');
       }
 
-      const isInRange = _firstDate > startTime && _firstDate < endTime;
+      const isOutRange = _firstDate > startTime && _firstDate < endTime;
 
-      var count = ((isInRange ? _firstDate : endTime) - startTime) / this._minuteDuration;
+      var count = ((isOutRange ? _firstDate : endTime) - startTime) / this._minuteDuration;
 
       if (count < 1) {
         count = 1;
@@ -54,7 +54,7 @@ export class TimeTrend {
         this.times.push(startTime + this._minuteDuration * i);
       }
 
-      if (isInRange) {
+      if (isOutRange) {
         break;
       }
     }
